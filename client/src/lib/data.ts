@@ -150,29 +150,83 @@ export const profileData = {
   talks: [
     {
       id: 1,
-      title: "Building High-Performance Microservices with Go",
-      event: "GoSF Meetup",
-      description: "Presented best practices for designing and implementing high-performance microservices using Go, covering topics like concurrency patterns, efficient error handling, and performance optimization techniques.",
-      date: "Nov 2022",
-      slides_link: null,
+      title: "Morgan Stanley Tech Talk Series Speaker",
+      event: "Morgan Stanley Internal Event",
+      description: "Delivered a tech talk at Morgan Stanley as part of their distinguished speaker series, discussing innovation in financial technology and building high-performance systems.",
+      date: "Mar 2024",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7300020445683019776/",
       video_link: null
     },
     {
       id: 2,
-      title: "Scaling Enterprise Applications on AWS",
-      event: "AWS Community Day",
-      description: "Shared insights and lessons learned from building and scaling enterprise applications on AWS infrastructure, focusing on best practices for reliability, performance, and cost optimization.",
-      date: "May 2019",
-      slides_link: null,
+      title: "Earned Distinguished Speaker Award",
+      event: "Morgan Stanley Recognition Program",
+      description: "Received the Distinguished Speaker Award at Morgan Stanley for exceptional contributions to knowledge sharing and technical leadership within the organization.",
+      date: "Feb 2024",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7285917502650359809/",
       video_link: null
     },
     {
       id: 3,
-      title: "Modern Frontend Architecture",
-      event: "React Bay Area",
-      description: "Discussed architectural patterns for building maintainable and scalable frontend applications with React, including state management strategies, component design, and performance considerations.",
-      date: "Oct 2021",
-      slides_link: null,
+      title: "Morgan Stanley's Global Top 5% Award",
+      event: "Morgan Stanley Global Recognition",
+      description: "Honored to be recognized among Morgan Stanley's Global Top 5% of employees, highlighting exceptional performance and impact on the organization.",
+      date: "Dec 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7218943278853836800/",
+      video_link: null
+    },
+    {
+      id: 4,
+      title: "Technology Excellence Award",
+      event: "Morgan Stanley Excellence Awards",
+      description: "Received Technology Excellence Award at Morgan Stanley for outstanding contributions to engineering excellence and innovative solutions.",
+      date: "Nov 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7193173230755418112/",
+      video_link: null
+    },
+    {
+      id: 5,
+      title: "Beyond Excellence Award",
+      event: "Morgan Stanley Recognition",
+      description: "Honored with the Beyond Excellence Award for exceptional performance and contributions that went above and beyond expectations.",
+      date: "Aug 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7119564174841540608/",
+      video_link: null
+    },
+    {
+      id: 6,
+      title: "Speaker at Wealth Management Training Program",
+      event: "Morgan Stanley Training Initiative",
+      description: "Delivered a comprehensive talk on modern engineering practices and digital transformation as part of Morgan Stanley's Wealth Management Training Program.",
+      date: "Dec 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7226515711781691393/",
+      video_link: null
+    },
+    {
+      id: 7,
+      title: "Engineering Excellence Speaker",
+      event: "Morgan Stanley Engineering Summit",
+      description: "Featured speaker at Morgan Stanley's Engineering Summit, sharing insights on building resilient and scalable systems for financial services.",
+      date: "Nov 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7196022606381137920/",
+      video_link: null
+    },
+    {
+      id: 8,
+      title: "Modern Architecture Patterns",
+      event: "MS Tech Conference",
+      description: "Presented on modern architecture patterns and practices for enterprise applications, focusing on scalability, security, and performance optimization.",
+      date: "Sep 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7163039826479460354/",
+      video_link: null
+    },
+    {
+      id: 9,
+      title: "Leadership in Engineering",
+      event: "Engineering Leadership Forum",
+      description: "Spoke on engineering leadership and best practices for managing technical teams in a rapidly evolving fintech environment.",
+      date: "Jun 2023",
+      slides_link: "https://www.linkedin.com/feed/update/urn:li:activity:7089114829096984578/",
       video_link: null
     }
   ]
