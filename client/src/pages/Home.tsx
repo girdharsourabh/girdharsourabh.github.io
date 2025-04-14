@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
 import Talks from "@/components/Talks";
+import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useQuery } from "@tanstack/react-query";
@@ -50,6 +51,12 @@ export default function Home() {
     initialData: profileData.talks,
   });
 
+  const { data: certificationsData, isLoading: isCertificationsLoading } = useQuery({
+    queryKey: ["/api/certifications"],
+    enabled: false,
+    initialData: profileData.certifications,
+  });
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]");
@@ -89,6 +96,7 @@ export default function Home() {
         <Education education={educationData} isLoading={isEducationLoading} />
         <Projects projects={projectsData} isLoading={isProjectsLoading} />
         <Talks talks={talksData} isLoading={isTalksLoading} />
+        <Certifications certifications={certificationsData} isLoading={isCertificationsLoading} />
         <Contact profile={profile} isLoading={isProfileLoading} />
       </main>
       

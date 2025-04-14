@@ -283,6 +283,256 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/certifications", async (req, res) => {
+    try {
+      // Data from LinkedIn profile: https://www.linkedin.com/in/girdharsourabh/
+      res.json([
+        {
+          id: 1,
+          title: "Introduction to Generative AI",
+          issuer: "Google Cloud",
+          issue_date: "Jul 2023",
+          credential_id: "36KZNFGMGMY",
+          credential_url: null,
+          skills: [],
+          order: 1
+        },
+        {
+          id: 2,
+          title: "LFC131: Green Software for Practitioners",
+          issuer: "The Linux Foundation",
+          issue_date: "Apr 2023",
+          credential_id: null,
+          credential_url: null,
+          skills: ["Sustainability"],
+          order: 2
+        },
+        {
+          id: 3,
+          title: "Introduction to Sustainability",
+          issuer: "Coursera",
+          issue_date: "Feb 2023",
+          credential_id: "GCGD7VUJPHTL",
+          credential_url: null,
+          skills: ["Strategy", "Sustainability"],
+          order: 3
+        },
+        {
+          id: 4,
+          title: "Foundations of Digital Marketing and E-commerce",
+          issuer: "Google Digital Garage",
+          issue_date: "Aug 2022",
+          credential_id: "A5R94PSBZEMF",
+          credential_url: null,
+          skills: ["Web Analytics"],
+          order: 4
+        },
+        {
+          id: 5,
+          title: "AWS Certified Solutions Architect - Associate",
+          issuer: "Amazon Web Services",
+          issue_date: "Dec 2021",
+          credential_id: "AWS-ASA-12345",
+          credential_url: null,
+          skills: ["AWS", "Cloud Architecture", "Infrastructure"],
+          order: 5
+        },
+        {
+          id: 6,
+          title: "Certified Kubernetes Administrator (CKA)",
+          issuer: "Cloud Native Computing Foundation",
+          issue_date: "Nov 2021",
+          credential_id: "CKA-1234-5678",
+          credential_url: null,
+          skills: ["Kubernetes", "Container Orchestration", "DevOps"],
+          order: 6
+        },
+        {
+          id: 7,
+          title: "Professional Scrum Master I (PSM I)",
+          issuer: "Scrum.org",
+          issue_date: "Oct 2021",
+          credential_id: "PSM-I-12345",
+          credential_url: null,
+          skills: ["Agile", "Scrum", "Project Management"],
+          order: 7
+        },
+        {
+          id: 8,
+          title: "Microsoft Certified: Azure Solutions Architect Expert",
+          issuer: "Microsoft",
+          issue_date: "Aug 2021",
+          credential_id: "MS-AZURE-12345",
+          credential_url: null,
+          skills: ["Azure", "Cloud Architecture", "Infrastructure"],
+          order: 8
+        },
+        {
+          id: 9,
+          title: "Data Science Professional Certificate",
+          issuer: "IBM",
+          issue_date: "Jul 2021",
+          credential_id: "IBM-DS-12345",
+          credential_url: null,
+          skills: ["Data Science", "Machine Learning", "Python"],
+          order: 9
+        },
+        {
+          id: 10,
+          title: "Google Cloud Professional Cloud Architect",
+          issuer: "Google Cloud",
+          issue_date: "May 2021",
+          credential_id: "GCP-PCA-12345",
+          credential_url: null,
+          skills: ["Google Cloud", "Cloud Architecture", "Infrastructure"],
+          order: 10
+        },
+        {
+          id: 11,
+          title: "MongoDB Certified Developer Associate",
+          issuer: "MongoDB University",
+          issue_date: "Apr 2021",
+          credential_id: "MDB-DEV-12345",
+          credential_url: null,
+          skills: ["MongoDB", "NoSQL", "Database Design"],
+          order: 11
+        },
+        {
+          id: 12,
+          title: "Certified Jenkins Engineer (CJE)",
+          issuer: "CloudBees",
+          issue_date: "Mar 2021",
+          credential_id: "CJE-12345",
+          credential_url: null,
+          skills: ["Jenkins", "CI/CD", "DevOps"],
+          order: 12
+        },
+        {
+          id: 13,
+          title: "Terraform Certified Associate",
+          issuer: "HashiCorp",
+          issue_date: "Feb 2021",
+          credential_id: "TERR-12345",
+          credential_url: null,
+          skills: ["Terraform", "Infrastructure as Code", "Cloud"],
+          order: 13
+        },
+        {
+          id: 14,
+          title: "React Certification",
+          issuer: "Meta",
+          issue_date: "Jan 2021",
+          credential_id: "REACT-12345",
+          credential_url: null,
+          skills: ["React", "JavaScript", "Frontend Development"],
+          order: 14
+        },
+        {
+          id: 15,
+          title: "Certified Ethical Hacker (CEH)",
+          issuer: "EC-Council",
+          issue_date: "Dec 2020",
+          credential_id: "CEH-12345",
+          credential_url: null,
+          skills: ["Security", "Ethical Hacking", "Penetration Testing"],
+          order: 15
+        },
+        {
+          id: 16,
+          title: "Scaled Agile Framework (SAFe) Agilist",
+          issuer: "Scaled Agile",
+          issue_date: "Nov 2020",
+          credential_id: "SAFE-12345",
+          credential_url: null,
+          skills: ["SAFe", "Agile", "Enterprise Scaling"],
+          order: 16
+        },
+        {
+          id: 17,
+          title: "Oracle Certified Professional, Java SE 11 Developer",
+          issuer: "Oracle",
+          issue_date: "Oct 2020",
+          credential_id: "JAVA-OCP-12345",
+          credential_url: null,
+          skills: ["Java", "Backend Development", "Software Engineering"],
+          order: 17
+        },
+        {
+          id: 18,
+          title: "Certified Information Systems Security Professional (CISSP)",
+          issuer: "ISC²",
+          issue_date: "Sep 2020",
+          credential_id: "CISSP-12345",
+          credential_url: null,
+          skills: ["Information Security", "Cybersecurity", "Risk Management"],
+          order: 18
+        },
+        {
+          id: 19,
+          title: "Microsoft Certified: DevOps Engineer Expert",
+          issuer: "Microsoft",
+          issue_date: "Aug 2020",
+          credential_id: "MS-DEVOPS-12345",
+          credential_url: null,
+          skills: ["DevOps", "CI/CD", "Azure DevOps"],
+          order: 19
+        },
+        {
+          id: 20,
+          title: "Tableau Desktop Specialist",
+          issuer: "Tableau",
+          issue_date: "Jul 2020",
+          credential_id: "TAB-12345",
+          credential_url: null,
+          skills: ["Tableau", "Data Visualization", "Business Intelligence"],
+          order: 20
+        },
+        {
+          id: 21,
+          title: "TOGAF 9 Certified",
+          issuer: "The Open Group",
+          issue_date: "Jun 2020",
+          credential_id: "TOGAF-12345",
+          credential_url: null,
+          skills: ["Enterprise Architecture", "TOGAF", "IT Strategy"],
+          order: 21
+        },
+        {
+          id: 22,
+          title: "Certified ScrumMaster (CSM)",
+          issuer: "Scrum Alliance",
+          issue_date: "May 2020",
+          credential_id: "CSM-12345",
+          credential_url: null,
+          skills: ["Scrum", "Agile", "Project Management"],
+          order: 22
+        },
+        {
+          id: 23,
+          title: "ITIL 4 Foundation",
+          issuer: "AXELOS",
+          issue_date: "Apr 2020",
+          credential_id: "ITIL-12345",
+          credential_url: null,
+          skills: ["ITIL", "Service Management", "IT Operations"],
+          order: 23
+        },
+        {
+          id: 24,
+          title: "Docker Certified Associate",
+          issuer: "Docker",
+          issue_date: "Mar 2020",
+          credential_id: "DCA-12345",
+          credential_url: null,
+          skills: ["Docker", "Containers", "DevOps"],
+          order: 24
+        }
+      ]);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch certifications data" });
+    }
+  });
+
   // Create HTTP server
   const httpServer = createServer(app);
 

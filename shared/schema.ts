@@ -111,3 +111,19 @@ export type Project = typeof projects.$inferSelect;
 
 export type InsertTalk = z.infer<typeof insertTalkSchema>;
 export type Talk = typeof talks.$inferSelect;
+
+// Certification table
+export const certifications = pgTable("certifications", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  issuer: text("issuer").notNull(),
+  issue_date: text("issue_date").notNull(),
+  credential_id: text("credential_id"),
+  credential_url: text("credential_url"),
+  skills: text("skills").array(),
+  order: integer("order").default(1),
+});
+
+export const insertCertificationSchema = createInsertSchema(certifications).omit({ id: true });
+export type InsertCertification = z.infer<typeof insertCertificationSchema>;
+export type Certification = typeof certifications.$inferSelect;
