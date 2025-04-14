@@ -12,8 +12,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({
         id: 1,
         name: "Sourabh Girdhar",
-        title: "Principal Engineer at Anaplan",
-        summary: "Tech leader with 15+ years of experience specializing in building scalable, user-focused applications with modern technologies. Proficient in Golang, React, gRPC, and cloud technologies (AWS, Google Cloud, Azure). Dedicated to creating efficient, maintainable software with a strong focus on technical excellence and customer delight.",
+        title: "Group Engineering Manager at Morgan Stanley",
+        summary: "I am an experienced engineering leader with a strong background in the fintech industry, having dedicated 18 years to this exciting field. Throughout my career, I have gained expertise in a wide range of technologies, starting from mainframe systems and progressing to serverless cloud solutions. My areas of knowledge encompass application development, application security, DevSecOps, and business process management. I am one of India's first Gartner engineering community ambassadors. I have had the privilege of working in diverse sectors within the fintech industry, including asset management, consumer financing, wealth management, and equity and fixed income. This exposure has allowed me to develop a comprehensive understanding of the industry's intricacies and challenges. As an engineering leader, I am passionate about driving innovation and delivering high-quality solutions that meet the evolving needs of the businesses. I thrive in collaborative environments, leveraging my expertise to lead teams and foster a culture of continuous improvement.",
         location: "San Francisco Bay Area",
         email: "contact@sourabhgirdhar.com",
         github: "https://github.com/girdhar-sourabh",
