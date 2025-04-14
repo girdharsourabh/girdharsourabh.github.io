@@ -33,48 +33,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json([
         {
           id: 1,
-          title: "Principal Engineer",
-          company: "Anaplan",
-          description: "Leading the architecture and development of next-generation enterprise intelligence solutions. Working with product teams to define and implement strategic technical initiatives. Building scalable, high-performance microservices using modern technology stacks.",
-          date_range: "Jan 2022 - Present",
-          technologies: ["Go", "React", "AWS", "Microservices", "gRPC", "Cloud Architecture"],
+          title: "Group Engineering Manager",
+          company: "Morgan Stanley",
+          description: "Leading a team of engineers responsible for developing and maintaining applications for wealth management division. Implementing modern engineering practices and driving digital transformation initiatives. Focusing on scalable, secure fintech solutions and mentoring engineering talent.",
+          date_range: "Feb 2023 - Present",
+          technologies: ["Leadership", "Fintech", "Cloud Architecture", "DevSecOps", "Agile/Scrum", "System Design"],
           order: 1
         },
         {
           id: 2,
-          title: "Senior Software Engineer",
+          title: "Principal Engineer",
           company: "Anaplan",
-          description: "Led the optimization of core calculation engine, resulting in 20-30% performance improvement. Developed highly scalable architecture using C++, Go, and JavaScript to support enterprise-level planning activities. Improved system reliability and implemented robust error handling.",
-          date_range: "Sep 2020 - Dec 2021",
-          technologies: ["Go", "C++", "JavaScript", "React", "Microservices"],
+          description: "Led the architecture and development of next-generation enterprise intelligence solutions. Worked with product teams to define and implement strategic technical initiatives. Built scalable, high-performance microservices using modern technology stacks.",
+          date_range: "Jan 2022 - Jan 2023",
+          technologies: ["Go", "React", "AWS", "Microservices", "gRPC", "Cloud Architecture"],
           order: 2
         },
         {
           id: 3,
           title: "Senior Software Engineer",
-          company: "Amazon Web Services (AWS)",
-          description: "Designed and implemented AWS Transfer service control plane and integrations with other AWS services. Developed APIs and maintained CI/CD pipelines for seamless deployment. Improved service performance and solved complex technical challenges.",
-          date_range: "Apr 2018 - Aug 2020",
-          technologies: ["Java", "AWS", "Distributed Systems", "CI/CD", "REST APIs"],
+          company: "Anaplan",
+          description: "Led the optimization of core calculation engine, resulting in 20-30% performance improvement. Developed highly scalable architecture using C++, Go, and JavaScript to support enterprise-level planning activities. Improved system reliability and implemented robust error handling.",
+          date_range: "Sep 2020 - Dec 2021",
+          technologies: ["Go", "C++", "JavaScript", "React", "Microservices"],
           order: 3
         },
         {
           id: 4,
+          title: "Senior Software Engineer",
+          company: "Amazon Web Services (AWS)",
+          description: "Designed and implemented AWS Transfer service control plane and integrations with other AWS services. Developed APIs and maintained CI/CD pipelines for seamless deployment. Improved service performance and solved complex technical challenges.",
+          date_range: "Apr 2018 - Aug 2020",
+          technologies: ["Java", "AWS", "Distributed Systems", "CI/CD", "REST APIs"],
+          order: 4
+        },
+        {
+          id: 5,
           title: "Software Development Engineer",
           company: "Microsoft",
           description: "Worked on core search scenarios for Office 365 apps like Outlook, OneDrive, and SharePoint. Developed services and improved indexing performance through optimizations. Created UX components for better search experiences.",
           date_range: "Jul 2015 - Mar 2018",
           technologies: ["C#", ".NET", "Azure", "React", "Microservices"],
-          order: 4
+          order: 5
         },
         {
-          id: 5,
+          id: 6,
           title: "Software Engineer",
           company: "Dell",
           description: "Built enterprise server management solutions to improve operational efficiency. Developed monitoring dashboards and implemented automated deployment systems. Collaborated with cross-functional teams to meet business requirements.",
           date_range: "Jun 2010 - Jun 2015",
           technologies: ["Java", "Spring", "HTML/CSS", "JavaScript", "SQL"],
-          order: 5
+          order: 6
         }
       ]);
     } catch (error) {
