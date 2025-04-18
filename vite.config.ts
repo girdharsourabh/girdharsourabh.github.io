@@ -9,7 +9,7 @@ export default defineConfig({
     include: ["linked-dep"],
   },
   build: {
-    outDir: "build",
+    outDir: "dist",
     terserOptions: {
       compress: {
         unused: true, //Removes unused code that is not needed during runtime

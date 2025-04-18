@@ -11,19 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: 22
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm i
 
       - name: Build Project
-        run: npm run build
+        run: pnpm run build
         # This will create a 'dist' folder with the built application
 
       - name: Deploy to GitHub Pages 🚀
