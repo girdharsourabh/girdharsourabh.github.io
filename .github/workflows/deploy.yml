@@ -6,6 +6,17 @@ on:
       - main # Set this to your default branch
       - nishant/playground
 
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -17,6 +28,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: "pnpm"
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -26,11 +38,11 @@ jobs:
 
       - name: Build Project
         run: pnpm run build
-        # This will create a 'dist' folder with the built application
 
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages # The branch the action should deploy to
-          folder: dist # The folder the action should deploy
-          clean: true # Automatically remove deleted files from the deployment
+          path: "./dist"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

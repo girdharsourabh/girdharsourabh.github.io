@@ -4,6 +4,7 @@ import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [react(), runtimeErrorOverlay(), themePlugin()],
   optimizeDeps: {
     include: ["linked-dep"],
