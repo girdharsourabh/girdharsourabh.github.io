@@ -38,7 +38,7 @@ export default function Hero({ profile, isLoading }: HeroProps) {
             <img
               src={
                 profile.profile_image ||
-                "https://via.placeholder.com/400?text=Profile+Image"
+                "https://media.licdn.com/dms/image/v2/D5603AQFok_9PS1AksQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729579402456?e=1751500800&v=beta&t=h2W6q9S-hEV1cBzbLCh5oPd2BmnxhDPVNf6TKOheVaE"
               }
               alt={`${profile.name} Profile Picture`}
               className="w-full h-full object-cover"

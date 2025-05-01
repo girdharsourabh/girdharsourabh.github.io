@@ -85,9 +85,10 @@ export default function ExperienceSection({
                     <h4 className="text-gray-700 font-medium mb-3">
                       {experience.company}
                     </h4>
-                    <p className="text-gray-600 mb-4">
-                      {experience.description}
-                    </p>
+                    <div 
+                      className="text-gray-600 mb-4"
+                      dangerouslySetInnerHTML={{ __html: experience.description }}
+                    />
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, i) => (
                         <Badge

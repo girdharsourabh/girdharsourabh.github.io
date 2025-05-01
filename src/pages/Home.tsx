@@ -15,49 +15,8 @@ import { profileData } from "../../github-pages-data";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
-
-  const { data: profile, isLoading: isProfileLoading } = useQuery({
-    queryKey: ["/api/profile"],
-    enabled: false,
-    initialData: profileData.profile,
-  });
-
-  const { data: experiences, isLoading: isExperiencesLoading } = useQuery({
-    queryKey: ["/api/experiences"],
-    enabled: false,
-    initialData: profileData.experiences,
-  });
-
-  const { data: skillsData, isLoading: isSkillsLoading } = useQuery({
-    queryKey: ["/api/skills"],
-    enabled: false,
-    initialData: profileData.skills,
-  });
-
-  const { data: educationData, isLoading: isEducationLoading } = useQuery({
-    queryKey: ["/api/education"],
-    enabled: false,
-    initialData: profileData.education,
-  });
-
-  const { data: projectsData, isLoading: isProjectsLoading } = useQuery({
-    queryKey: ["/api/projects"],
-    enabled: false,
-    initialData: profileData.projects,
-  });
-
-  const { data: talksData, isLoading: isTalksLoading } = useQuery({
-    queryKey: ["/api/talks"],
-    enabled: false,
-    initialData: profileData.talks,
-  });
-
-  const { data: certificationsData, isLoading: isCertificationsLoading } =
-    useQuery({
-      queryKey: ["/api/certifications"],
-      enabled: false,
-      initialData: profileData.certifications,
-    });
+const { profile, experiences, skills, education, certifications, projects, talks} = profileData;
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,20 +51,20 @@ export default function Home() {
       <Header activeSection={activeSection} />
 
       <main>
-        <Hero profile={profile} isLoading={isProfileLoading} />
+        <Hero profile={profile} isLoading={false} />
         <Experience
           experiences={experiences}
-          isLoading={isExperiencesLoading}
+          isLoading={false}
         />
-        <Skills skills={skillsData} isLoading={isSkillsLoading} />
-        <Education education={educationData} isLoading={isEducationLoading} />
-        <Projects projects={projectsData} isLoading={isProjectsLoading} />
-        <Talks talks={talksData} isLoading={isTalksLoading} />
+        <Skills skills={skills} isLoading={false} />
+        <Education education={education} isLoading={false} />
+        <Projects projects={projects} isLoading={false} />
+        <Talks talks={talks} isLoading={false} />
         <Certifications
-          certifications={certificationsData}
-          isLoading={isCertificationsLoading}
+          certifications={certifications}
+          isLoading={false}
         />
-        <Contact profile={profile} isLoading={isProfileLoading} />
+        <Contact profile={profile} isLoading={false} />
       </main>
 
       <Footer profile={profile} />

@@ -6,12 +6,12 @@ export const profileData = {
     id: 1,
     first_name: "Sourabh",
     last_name: "Girdhar",
-    title: "Group Engineering Manager at Morgan Stanley",
-    email: "contact@example.com",
-    location: "San Francisco Bay Area",
-    bio: "Engineering leader with 18+ years of experience in financial technology, specializing in building scalable, high-performance systems. Proven track record of leading teams to deliver innovative solutions that drive business value. Expert in distributed systems, cloud architecture, and modern engineering practices.",
+    title: "Chief Technology Officer at Care.fi",
+    email: "girdharsourabh@gmail.com",
+    location: "Gurugram, India",
+    bio: "Engineering leader with 19+ years of experience in financial technology, specializing in building scalable, high-performance systems. Proven track record of leading teams to deliver innovative solutions that drive business value. Expert in distributed systems, cloud architecture, and modern engineering practices.",
     avatar_url:
-      "https://media.licdn.com/dms/image/D5603AQF9aKlmAZsQGg/profile-displayphoto-shrink_800_800/0/1685506280047?e=1715212800&v=beta&t=pWYDXFnX_2U_bAm9vh-Uxd5S0XAHFY4a3nFzX1J6V-E",
+      "https://media.licdn.com/dms/image/v2/D5603AQFok_9PS1AksQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729579402456?e=1751500800&v=beta&t=h2W6q9S-hEV1cBzbLCh5oPd2BmnxhDPVNf6TKOheVaE",
     github_url: "https://github.com/girdharsourabh",
     linkedin_url: "https://www.linkedin.com/in/girdharsourabh/",
     portfolio_url: null,
@@ -20,11 +20,11 @@ export const profileData = {
   experiences: [
     {
       id: 1,
-      title: "Group Engineering Manager",
-      company: "Morgan Stanley",
+      title: "Chief Technology Officer",
+      company: "Care.fi",
       description:
-        "Leading a team of engineers responsible for developing and maintaining applications for wealth management division. Implementing modern engineering practices and driving digital transformation initiatives. Focusing on scalable, secure fintech solutions and mentoring engineering talent.",
-      date_range: "Feb 2023 - Present",
+        "<p>Building a full stack credit-to-commerce, solving critical challenges in our entire healthcare ecosystem.<br />- Building smartest AI enabled RCM for India.<br />- Digital credit line for suppliers, hospital and pharmacies.<br />- B2B marketplace for pharmacy.</p>",
+      date_range: "Nov 2023 - Present",
       technologies: [
         "Leadership",
         "Fintech",
@@ -37,11 +37,11 @@ export const profileData = {
     },
     {
       id: 2,
-      title: "Principal Engineer",
-      company: "Anaplan",
+      title: "Engineering Leader",
+      company: "OLX",
       description:
-        "Led the architecture and development of next-generation enterprise intelligence solutions. Worked with product teams to define and implement strategic technical initiatives. Built scalable, high-performance microservices using modern technology stacks.",
-      date_range: "Jan 2022 - Jan 2023",
+        "<p>Lead the the development of complex Loan Management System (LMS), Business Risk Engine from scratch.<br /><br />Built a roadmap with the Product team on multiple products like LMS, Risk Engine, Configuration Management, Dealer financing, Value Added Services (VAS), Collections and payments.<br /><br />With all these new finance stack, business gained - <br />100% increase in loan book to 220 MN USD.<br />Cost saving of 50K USD annually due to automations and vendor licenses.<br />Increase in online collection from 40% to 60% (200K per month).<br />Reduction in Manual reviews for approvals from 40% to under 10% (25K USD annual savings).<br />Reduction error loan in loan processing from 6% to 0.2%.<br />Reduction of DPD - 90 (delayed loans) from 5.6% to 4.1%.<br /><br />Collaborated with Product, Design, Analytics, Engineering, and other teams to align organisational goals with company&rsquo;s objectives.<br /><br />Lead a team of 35+, including 5 team leads leading teams of 6-9 each. Directly responsible for performance evaluation, career development, and growth of the team.<br /><br />Interviewed, hired, and on boarded 20 new engineers, with a retention rate of 95%. Part of campus and leadership hiring team.<br /><br />Worked on design of complete competency framework of technology for the whole OLX group.</p>",
+      date_range: "Sep 2021 - nov 2023",
       technologies: [
         "Go",
         "React",
@@ -54,21 +54,28 @@ export const profileData = {
     },
     {
       id: 3,
-      title: "Senior Software Engineer",
-      company: "Anaplan",
+      title: "Engineering Manager",
+      company: "Ameriprise Financials",
       description:
-        "Led the optimization of core calculation engine, resulting in 20-30% performance improvement. Developed highly scalable architecture using C++, Go, and JavaScript to support enterprise-level planning activities. Improved system reliability and implemented robust error handling.",
-      date_range: "Sep 2020 - Dec 2021",
+        "<p>Lead an engineering team of 12 engineers working on 6 different products.<br /><br />Responsible for conversion of monolithic architecture to micro services and set the patterns for new app developments.<br /><br />Worked on development of single page apps around Client and account maintenance, Asset allocation, Risk assessment, Advisor tools, New account setup.<br /><br />Worked on setting the team in india including employees and contractors.<br /><br />Improved team workflow by adopting continuous integration, continuous deployment, delivery pipelines and reducing human coding errors by 80%.<br /><br />Tech stack included - Java, Spring boot, Spring cloud, Adobe experience Manager, Apache mesos, Docker, Oracle, DB2, Redis.</p>"+
+        "<p>Lead the team for reconciliation in Columbia Thread-needle Investments.</p>"+
+        "<p>Individually created a swift messaging based framework, resulting in 1.5 MN USD saving for the company.</p>"+
+        "<p>Worked on a global order management system to run compliance and integration with trading systems.</p>"+
+        "<p>Implemented technical solutions for GL Reconciliation, Bank Reconciliation, Custodian Reconciliation, Trading System Reconciliation.</p>"+
+        "<p>Developed multiple dashboards, automations, reports to help Business, product ops, support teams.</p>"+
+        "<p>Developed C# windows services to load orders to trading system and run compliance.</p>"+
+        "<p>Technologies worked on - Frontier reconciliation tool, Spring Batch, Ibatis, C#, Crystal reports, Velocity, J2EE, Spring Boot, Rest services, SQL Server, JQuery, WPF.</p>",
+      date_range: "Aug 2018 - Sep 2021",
       technologies: ["Go", "C++", "JavaScript", "React", "Microservices"],
       order: 3,
     },
     {
       id: 4,
-      title: "Senior Software Engineer",
-      company: "Amazon Web Services (AWS)",
+      title: "Consultant - Investment Management Technology",
+      company: "Fidelity International",
       description:
-        "Designed and implemented AWS Transfer service control plane and integrations with other AWS services. Developed APIs and maintained CI/CD pipelines for seamless deployment. Improved service performance and solved complex technical challenges.",
-      date_range: "Apr 2018 - Aug 2020",
+        "<p>Developed module for portfolio modelling and instruction models for fund managers.<br /><br />Contributed to 1000+ rules based rule engine for compliance processing in equity order processing.<br /><br />Worked on trading system integrations.<br /><br />Tested software for bugs and documented processes, increasing efficiency by 15%<br /><br />Built an excel modelling based module which reduced execution time for portfolio managers by 50%. <br /><br />Tech stack included - .NET based thick client with Spring, Drools, Oracle, Ibatis in backend with Websphere.</p>",
+      date_range: "Mar 2012 - May 2013",
       technologies: [
         "Java",
         "AWS",
@@ -80,42 +87,58 @@ export const profileData = {
     },
     {
       id: 5,
-      title: "Software Development Engineer",
-      company: "Microsoft",
+      title: "Analyst - Fixed Income Technology",
+      company: "Nomura",
       description:
-        "Worked on core search scenarios for Office 365 apps like Outlook, OneDrive, and SharePoint. Developed services and improved indexing performance through optimizations. Created UX components for better search experiences.",
+      "<p>Worked on development of structured products research portal.<br />Worked on Fixed Income connectivity tools. <br />Involved in various activities like development of exchange connectors, feeders , readers, monitors.<br />Technical work involves Tibco RV , Hibernate ,Spring, Web Services, Swing, JSF , Java/J2EE , Unix scripting , Glassfish.</p>",  
       date_range: "Jul 2015 - Mar 2018",
       technologies: ["C#", ".NET", "Azure", "React", "Microservices"],
       order: 5,
     },
     {
       id: 6,
-      title: "Software Engineer",
-      company: "Dell",
-      description:
-        "Built enterprise server management solutions to improve operational efficiency. Developed monitoring dashboards and implemented automated deployment systems. Collaborated with cross-functional teams to meet business requirements.",
-      date_range: "Jun 2010 - Jun 2015",
+      title: "Developer - BPM",
+      company: "Lehman Brothers",
+      description: "<p>Worked in global BPM COE team. <br />Work included managing Tibco BPM suite iProcess and consulting global teams on usage.<br />Development of workflows and case management applications.<br />Development of workflow oriented web applications with Tibco as engine. <br />Technologies included Java/J2EE, Spring, Tibco, Ajax, Javascript, Flex.</p>",
+        date_range: "Nov 2007 - Sep 2008",
       technologies: ["Java", "Spring", "HTML/CSS", "JavaScript", "SQL"],
       order: 6,
+    },
+    {
+      id: 7,
+      title: "Associate Software Engineer",
+      company: "IBM",
+      description: "<p>Worked For Sprint-Nextel (USA). <br />Involved in development and maintenance activities for applications like Circuit Switched Manger and Card Management System.<br />Worked on development on servlet, JSP based web applications hosted on WebSphere.<br />Technical work includes Java/J2EE, Unix, Natural-Adabase, Mainframe, Ajax, XML etc</p>",
+        date_range: "Jul 2006 - Oct 2007",
+      technologies: ["Java", "Spring", "HTML/CSS", "JavaScript", "SQL"],
+      order: 7,
     },
   ],
   skills: [
     {
-      id: 1,
-      category: "languages",
-      items: ["Go", "C++", "JavaScript", "TypeScript", "Java", "C#", "Python"],
+      id: 2,
+      category: "Technology Area",
+      items: [
+        "Artificial Intelligence",
+        "Application Development", 
+        "DevSecops", 
+        "Cloud and Serverless", 
+        "Cyber Security",
+        "System Design",
+        "Data Management and Analytics",
+      ]
     },
     {
       id: 2,
-      category: "frontend",
+      category: "Domain",
       items: [
-        "React",
-        "Redux",
-        "HTML5",
-        "CSS3",
-        "SASS",
-        "Material UI",
-        "Responsive Design",
+        "Health Insurance",
+        "Equities",
+        "Consumer and B2B financing",
+        "Reconciliation",
+        "Asset Allocation and Wealth Management",
+        "Asset Management (Mutual Funds)",
+        "Fixed Income",
       ],
     },
     {
@@ -123,46 +146,39 @@ export const profileData = {
       category: "backend",
       items: [
         "Microservices",
-        "gRPC",
+        "Integrations",
         "REST APIs",
-        "Node.js",
-        "Spring",
-        ".NET",
-        "GraphQL",
+        "Batch Processing",
       ],
     },
     {
       id: 4,
       category: "databases",
       items: [
-        "MySQL",
-        "PostgreSQL",
-        "DynamoDB",
-        "MongoDB",
-        "Redis",
-        "Elasticsearch",
+        "SQL",
+        "No SQL",
       ],
     },
     {
       id: 5,
-      category: "devops",
+      category: "Cloud and DevSecops",
       items: [
         "AWS",
-        "Azure",
         "Google Cloud",
         "Docker",
         "Kubernetes",
         "CI/CD",
-        "Terraform",
+        "Github",
       ],
     },
     {
       id: 6,
-      category: "soft",
+      category: "Leadership",
       items: [
         "Technical Leadership",
-        "System Design",
         "Mentoring",
+        "Team Management",
+        "Road Mapping",
         "Agile/Scrum",
         "Problem Solving",
       ],
