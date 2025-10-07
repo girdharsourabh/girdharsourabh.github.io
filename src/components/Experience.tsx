@@ -12,7 +12,7 @@ export default function ExperienceSection({
   isLoading,
 }: ExperienceProps) {
   const renderSkeletonExperience = () => (
-    <div className="relative mb-16">
+    <div className="relative mb-8">
       <div className="flex flex-col md:flex-row items-start">
         <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-4 h-4 rounded-full bg-primary transform -translate-y-1/2 md:-translate-x-1/2"></div>
 
@@ -39,11 +39,11 @@ export default function ExperienceSection({
   return (
     <section id="experience" className="py-16 md:py-24 bg-white px-4">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">
+        <h2 className="text-3xl font-bold mb-6 text-center">
           Professional Experience
         </h2>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative mx-auto ">
           {/* Timeline bar */}
           <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-0.5 h-full bg-gray-200 transform md:-translate-x-1/2"></div>
 
@@ -58,7 +58,7 @@ export default function ExperienceSection({
               <div
                 key={experience.id}
                 className={`relative ${
-                  index !== experiences.length - 1 ? "mb-16" : ""
+                  index !== experiences.length - 1 ? "mb-8" : ""
                 }`}
               >
                 <div className="flex flex-col md:flex-row items-start">
@@ -66,14 +66,14 @@ export default function ExperienceSection({
                   <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-4 h-4 rounded-full bg-primary transform -translate-y-1/2 md:-translate-x-1/2"></div>
 
                   {/* Left content (date for desktop) */}
-                  <div className="hidden md:block w-1/2 pr-12 text-right">
+                  <div className="hidden md:block w-1/4 pr-12 text-right">
                     <span className="text-gray-500 font-medium">
                       {experience.date_range}
                     </span>
                   </div>
 
                   {/* Right content (or full content on mobile) */}
-                  <div className="pl-10 md:pl-0 md:w-1/2 md:pl-12">
+                  <div className="pl-10 md:pl-0 md:w-3/4 md:pl-12">
                     {/* Mobile date display */}
                     <span className="md:hidden text-gray-500 font-medium block mb-2">
                       {experience.date_range}

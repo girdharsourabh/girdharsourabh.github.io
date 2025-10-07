@@ -48,7 +48,10 @@ export default function EducationSection({
                   <h4 className="text-gray-700 font-medium mb-3">
                     {edu.institution}
                   </h4>
-                  <p className="text-gray-600">{edu.description}</p>
+                  <div
+                    className="text-gray-600"
+                    dangerouslySetInnerHTML={{ __html: edu.description }}
+                  />
                 </CardContent>
               </Card>
             ))

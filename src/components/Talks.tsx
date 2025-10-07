@@ -1,15 +1,16 @@
 import { Award, FileText, Link, Video } from "lucide-react";
-import { Talk } from "../shared/schema.ts";
+import { Talk, Article } from "../shared/schema.ts";
 import { Skeleton } from "./ui/skeleton.tsx";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Badge } from "./ui/badge";
 
 interface TalksProps {
   talks: Talk[] | undefined;
+  articles?: Article[] | undefined;
   isLoading: boolean;
 }
 
-export default function TalksSection({ talks, isLoading }: TalksProps) {
+export default function TalksSection({ talks, articles = [], isLoading }: TalksProps) {
   const renderSkeletonTalk = () => (
     <div className="mb-10 last:mb-0">
       <div className="flex flex-col md:flex-row gap-6">
@@ -56,6 +57,7 @@ export default function TalksSection({ talks, isLoading }: TalksProps) {
                   <TabsTrigger value="all">All</TabsTrigger>
                   <TabsTrigger value="talks">Talks</TabsTrigger>
                   <TabsTrigger value="awards">Awards</TabsTrigger>
+                  <TabsTrigger value="articles">Articles</TabsTrigger>
                 </TabsList>
               </div>
 
@@ -242,6 +244,60 @@ export default function TalksSection({ talks, isLoading }: TalksProps) {
                                 className="text-primary hover:text-primary/80 font-medium flex items-center gap-1"
                               >
                                 <Link className="h-4 w-4" /> LinkedIn Post
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </TabsContent>
+
+              <TabsContent value="articles" className="space-y-8">
+                {(articles || [])
+                  .sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return dateB.getTime() - dateA.getTime();
+                  })
+                  .map((article) => (
+                    <div
+                      key={article.id}
+                      className="mb-10 last:mb-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="md:w-1/4">
+                          <span className="text-gray-500 font-medium">
+                            {article.date}
+                          </span>
+                          <div className="mt-2">
+                            <Badge
+                              variant="outline"
+                              className="bg-emerald-50 text-emerald-700 border-emerald-200"
+                            >
+                              <FileText className="h-3 w-3 mr-1" /> Article
+                            </Badge>
+                          </div>
+                        </div>
+                        <div className="md:w-3/4">
+                          <h3 className="text-xl font-semibold mb-2">
+                            {article.title}
+                          </h3>
+                          <h4 className="text-gray-700 font-medium mb-3">
+                            {article.source}
+                          </h4>
+                          <p className="text-gray-600 mb-3">
+                            {article.description}
+                          </p>
+                          <div className="flex gap-3">
+                            {article.link && (
+                              <a
+                                href={article.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 font-medium flex items-center gap-1"
+                              >
+                                <Link className="h-4 w-4" /> Read
                               </a>
                             )}
                           </div>
