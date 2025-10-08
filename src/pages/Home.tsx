@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Education from "../components/Education";
-import Projects from "../components/Projects";
+// import Projects from "../components/Projects";
 import Talks from "../components/Talks";
 import Certifications from "../components/Certifications";
 import Contact from "../components/Contact";
@@ -58,7 +58,7 @@ const { profile, experiences, skills, education, certifications, projects, talks
         />
         <Skills skills={skills} isLoading={false} />
         <Education education={education} isLoading={false} />
-        <Projects projects={projects} isLoading={false} />
+        {/** <Projects projects={projects} isLoading={false} /> **/}
         <Talks talks={talks} articles={articles} isLoading={false} />
         <Certifications
           certifications={certifications}

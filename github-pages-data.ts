@@ -260,7 +260,7 @@ export const profileData = {
   talks: [
     {
       id: 1,
-      title: "Observability Overload",
+      title: "Panelist - Observability Overload",
       event: "India Devops show 2025",
       description:
         "Panelist at India Devops show 2025, discussing observability and its importance in modern software development.",
