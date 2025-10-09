@@ -45,7 +45,7 @@ export default function ExperienceSection({
 
         <div className="relative mx-auto ">
           {/* Timeline bar */}
-          <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-0.5 h-full bg-gray-200 transform md:-translate-x-1/2"></div>
+          <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-0.5 h-full bg-white-200 transform md:-translate-x-1/2"></div>
 
           {isLoading || !experiences ? (
             <>
@@ -63,7 +63,7 @@ export default function ExperienceSection({
               >
                 <div className="flex flex-col md:flex-row items-start">
                   {/* Timeline dot */}
-                  <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-4 h-4 rounded-full bg-primary transform -translate-y-1/2 md:-translate-x-1/2"></div>
+                  <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 w-4 h-4 rounded-full bg-primary transform -translate-y-1/2 md:-translate-x-1/2 hidden"></div>
 
                   {/* Left content (date for desktop) */}
                   <div className="hidden md:block w-1/4 pr-12 text-right">
