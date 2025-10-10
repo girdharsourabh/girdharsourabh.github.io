@@ -21,7 +21,7 @@ export const profileData = {
       title: "Chief Technology Officer",
       company: "Care.fi",
       description:
-        "<p><p>Overseeing multiple business lines with an ARR of USD 1M, driving innovation, scale, and governance across</p><p>healthcare fintech.</p><p>●</p><p>Innovation &amp; AI: Spearheaded a GenAI-powered quality check tool for health insurance claims; built a</p><p>full-stack credit-to-commerce platform tackling systemic healthcare challenges.</p><p>●</p><p>Scaling Operations: Expanded Instant Discharge (B2B2C) 7x to 7,000+ cases/month within a year;</p><p>launched a B2B pharmacy marketplace and a SaaS-based hospital revenue cycle management platform,</p><p>processing 500k+ claims in 6 months.</p><p>●</p><p>Fintech Growth: Led the digital credit line system for suppliers, hospitals, and pharmacies &mdash; disbursals</p><p>crossed <strong>₹</strong>1,000 Cr with ₹100 Cr AUM, achieving 400% growth in two years.</p><p>●</p><p>Governance &amp; Leadership: Directed infrastructure and cybersecurity; successfully delivered ISO &amp; SOC2</p><p>certifications. Actively involved in acquisitions, investor due diligence, and key management initiatives.</p></p>",
+        "<p><p>Overseeing multiple business lines with an ARR of USD 1M, driving innovation, scale, and governance across</p><p>healthcare fintech.</p><p>Innovation &amp; AI: Spearheaded a GenAI-powered quality check tool for health insurance claims; built a</p><p>full-stack credit-to-commerce platform tackling systemic healthcare challenges.</p><p>Scaling Operations: Expanded Instant Discharge (B2B2C) 7x to 7,000+ cases/month within a year;</p><p>launched a B2B pharmacy marketplace and a SaaS-based hospital revenue cycle management platform,</p><p>processing 500k+ claims in 6 months.</p><p>Fintech Growth: Led the digital credit line system for suppliers, hospitals, and pharmacies &mdash; disbursals</p><p>crossed <strong>₹</strong>1,000 Cr with ₹100 Cr AUM, achieving 400% growth in two years.</p><p>Governance &amp; Leadership: Directed infrastructure and cybersecurity; successfully delivered ISO &amp; SOC2</p><p>certifications. Actively involved in acquisitions, investor due diligence, and key management initiatives.</p></p>",
       date_range: "Nov 2023 - Present",
       technologies: [
         "Leadership",
@@ -432,168 +432,238 @@ export const profileData = {
       link: "https://www.linkedin.com/pulse/shift-left-security-fintech-sourabh-girdhar/",
     },
   ],
-  certifications: [
-    {
-      "title": "AI in Cybersecurity Training By CyberFrat Certificate",
-      "issuer": "CyberFrat",
-      "issue_date": "Mar 2025",
-      "credential_id": "qjHyttJu12",
-      "skills": null,
-      "credential_url": "https://verify.netcredential.com/qjHyttJu12"
+  certifications: [{
+    "title": "AI in Cybersecurity Training By CyberFrat Certificate",
+    "issuer": "CyberFrat",
+    "issue_date": "Mar 2025",
+    "credential_id": "qjHyttJu12",
+    "skills": [],
+    "credential_url": "https://verify.netcredential.com/qjHyttJu12"
     },
     {
-      "title": "Cybersecurity Awareness - CAPC",
-      "issuer": "Certiprof",
-      "issue_date": "Oct 2024",
-      "credential_id": null,
-      "skills": ["Information Security"],
-      "credential_url": "https://www.credly.com/badges/aab9f650-ef1c-4ae0-81ed-bbf06a0aa1a0/linked_in_profile"
+    "title": "Cybersecurity Awareness - CAPC",
+    "issuer": "Certiprof",
+    "issue_date": "Oct 2024",
+    "credential_id": null,
+    "skills": ["Information Security"],
+    "credential_url": "https://www.credly.com/badges/aab9f650-ef1c-4ae0-81ed-bbf06a0aa1a0/linked_in_profile"
     },
     {
-      "title": "Introduction to FinOps",
-      "issuer": "FinOps Foundation",
-      "issue_date": "Oct 2024",
-      "credential_id": "6mer72f2nqn6",
-      "skills": null,
-      "credential_url": "https://verify.skilljar.com/c/6mer72f2nqn6"
+    "title": "Introduction to FinOps",
+    "issuer": "FinOps Foundation",
+    "issue_date": "Oct 2024",
+    "credential_id": "6mer72f2nqn6",
+    "skills": [],
+    "credential_url": "https://verify.skilljar.com/c/6mer72f2nqn6"
     },
     {
-      "title": "Introduction to Generative AI",
-      "issuer": "Google Cloud",
-      "issue_date": "Jul 2023",
-      "credential_id": "36KZNFGMGGMY",
-      "skills": null,
-      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/36KZNFGMGGMY"
+    "title": "Introduction to Generative AI",
+    "issuer": "Google Cloud",
+    "issue_date": "Jul 2023",
+    "credential_id": "36KZNFGMGGMY",
+    "skills": [],
+    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/36KZNFGMGGMY"
     },
     {
-      "title": "LFC131: Green Software for Practitioners",
-      "issuer": "The Linux Foundation",
-      "issue_date": "Apr 2023",
-      "credential_id": null,
-      "skills": ["Sustainability"],
-      "credential_url": "https://www.credly.com/badges/3ea533ba-632b-46b0-b85c-2c4798ac6b12/linked_in_profile"
+    "title": "LFC131: Green Software for Practitioners",
+    "issuer": "The Linux Foundation",
+    "issue_date": "Apr 2023",
+    "credential_id": null,
+    "skills": ["Sustainability"],
+    "credential_url": "https://www.credly.com/badges/3ea533ba-632b-46b0-b85c-2c4798ac6b12/linked_in_profile"
     },
     {
-      "title": "Introduction to Sustainability",
-      "issuer": "Coursera",
-      "issue_date": "Feb 2023",
-      "credential_id": "GCGD7VUJPHTL",
-      "skills": ["Strategy","Sustainability"],
-      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/GCGD7VUJPHTL"
+    "title": "Introduction to Sustainability",
+    "issuer": "Coursera",
+    "issue_date": "Feb 2023",
+    "credential_id": "GCGD7VUJPHTL",
+    "skills": ["Strategy", "Sustainability"],
+    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/GCGD7VUJPHTL"
     },
     {
-      "title": "Foundations of Digital Marketing and E-commerce",
-      "issuer": "Google Digital Garage",
-      "issue_date": "Aug 2022",
-      "credential_id": "A5R94PSBZEMF",
-      "skills": ["Web Analytics"],
-      "credential_url": "https://www.coursera.org/account/accomplishments/verify/A5R94PSBZEMF"
+    "title": "Foundations of Digital Marketing and E-commerce",
+    "issuer": "Google Digital Garage",
+    "issue_date": "Aug 2022",
+    "credential_id": "A5R94PSBZEMF",
+    "skills": ["Web Analytics"],
+    "credential_url": "https://www.coursera.org/account/accomplishments/verify/A5R94PSBZEMF"
     },
     {
-      "title": "Reactive Architecture: Introduction to Reactive Systems",
-      "issuer": "Akka",
-      "issue_date": "Aug 2022",
-      "credential_id": "36f4534161a940daae97e0210a92e365",
-      "skills": ["FinTech","Kubernetes"],
-      "credential_url": "https://courses.cognitiveclass.ai/certificates/36f4534161a940daae97e0210a92e365"
+    "title": "Reactive Architecture: Introduction to Reactive Systems",
+    "issuer": "Akka",
+    "issue_date": "Aug 2022",
+    "credential_id": "36f4534161a940daae97e0210a92e365",
+    "skills": ["FinTech", "Kubernetes"],
+    "credential_url": "https://courses.cognitiveclass.ai/certificates/36f4534161a940daae97e0210a92e365"
     },
     {
-      "title": "Getting Started with Data Analytics on AWS",
-      "issuer": "Coursera",
-      "issue_date": "Apr 2022",
-      "credential_id": "9ZCY5E8CC5KD",
-      "skills": ["Databases"],
-      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/9ZCY5E8CC5KD"
+    "title": "Getting Started with Data Analytics on AWS",
+    "issuer": "Coursera",
+    "issue_date": "Apr 2022",
+    "credential_id": "9ZCY5E8CC5KD",
+    "skills": ["Databases"],
+    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/9ZCY5E8CC5KD"
     },
     {
-      "title": "Glassbox Journey Analy",
-      "issuer": "Glassbox",
-      "issue_date": "Mar 2021",
-      "credential_id": "CR-12344",
-      "skills": null,
-      "credential_url": null
+    "title": "Glassbox Journey Analy",
+    "issuer": "Glassbox",
+    "issue_date": "Mar 2021",
+    "credential_id": "CR-12344",
+    "skills": [],
+    "credential_url": null
     },
     {
-      "title": "API Designer",
-      "issuer": "API Academy Certification",
-      "issue_date": "Sep 2020",
-      "credential_id": "59545822",
-      "skills": ["Information Security","FinTech"],
-      "credential_url": null
+    "title": "API Designer",
+    "issuer": "API Academy Certification",
+    "issue_date": "Sep 2020",
+    "credential_id": "59545822",
+    "skills": ["Information Security", "FinTech"],
+    "credential_url": null
     },
     {
-      "title": "Introduction to Cybersecurity",
-      "issuer": "Cisco",
-      "issue_date": "Aug 2020",
-      "credential_id": null,
-      "skills": ["Information Security"],
-      "credential_url": "https://www.youracclaim.com/badges/68d90a53-f89f-4fd6-8b2d-3cb250ae18f1?source=linked_in_profile"
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco",
+    "issue_date": "Aug 2020",
+    "credential_id": null,
+    "skills": ["Information Security"],
+    "credential_url": "https://www.youracclaim.com/badges/68d90a53-f89f-4fd6-8b2d-3cb250ae18f1?source=linked_in_profile"
     },
     {
-      "title": "Microsoft Certified: Azure Fundamentals",
-      "issuer": "Microsoft",
-      "issue_date": "Jul 2020",
-      "credential_id": null,
-      "skills": ["Cloud"],
-      "credential_url": "https://www.youracclaim.com/badges/563ccfd7-8b2b-49ad-94c6-9959c6c8f0a2/linked_in_profile"
+    "title": "Microsoft Certified: Azure Fundamentals",
+    "issuer": "Microsoft",
+    "issue_date": "Jul 2020",
+    "credential_id": null,
+    "skills": ["Cloud"],
+    "credential_url": "https://www.youracclaim.com/badges/563ccfd7-8b2b-49ad-94c6-9959c6c8f0a2/linked_in_profile"
     },
     {
-      "title": "Automation Anywhere Certified Advanced RPA Professional (V11.0)",
-      "issuer": "Automation Anywhere",
-      "issue_date": "Apr 2020",
-      "credential_id": "15978337",
-      "skills": null,
-      "credential_url": "https://certificates.automationanywhere.com/d933daf2-fad8-46fd-bb3b-6e6555d5f565"
+    "title": "Automation Anywhere Certified Advanced RPA Professional (V11.0)",
+    "issuer": "Automation Anywhere",
+    "issue_date": "Apr 2020",
+    "credential_id": "15978337",
+    "skills": [],
+    "credential_url": "https://certificates.automationanywhere.com/d933daf2-fad8-46fd-bb3b-6e6555d5f565"
     },
     {
-      "title": "Corda Certified Developer",
-      "issuer": "R3",
-      "issue_date": "Oct 2019",
-      "credential_id": null,
-      "skills": ["Blockchain"],
-      "credential_url": "https://www.youracclaim.com/badges/6cd8e7df-ea2f-448e-a5bd-69704d0f23de/linked_in_profile"
+    "title": "Corda Certified Developer",
+    "issuer": "R3",
+    "issue_date": "Oct 2019",
+    "credential_id": null,
+    "skills": ["Blockchain"],
+    "credential_url": "https://www.youracclaim.com/badges/6cd8e7df-ea2f-448e-a5bd-69704d0f23de/linked_in_profile"
     },
     {
-      "title": "Getting Started with Google Kubernetes Engine",
-      "issuer": "Coursera",
-      "issue_date": "Oct 2018",
-      "credential_id": "96DE4975SLQL",
-      "skills": ["Configuration Management","Cloud","Kubernetes"],
-      "credential_url": "https://www.coursera.org/account/accomplishments/verify/96DE4975SLQL"
+    "title": "Getting Started with Google Kubernetes Engine",
+    "issuer": "Coursera",
+    "issue_date": "Oct 2018",
+    "credential_id": "96DE4975SLQL",
+    "skills": ["Configuration Management", "Cloud", "Kubernetes"],
+    "credential_url": "https://www.coursera.org/account/accomplishments/verify/96DE4975SLQL"
     },
     {
-      "title": "Mongo DB Basics",
-      "issuer": "MongoDB",
-      "issue_date": "Oct 2018",
-      "credential_id": null,
-      "skills": ["Databases"],
-      "credential_url": "http://university.mongodb.com/course_completion/89985073-f8f1-4558-9715-39252fc6"
+    "title": "Mongo DB Basics",
+    "issuer": "MongoDB",
+    "issue_date": "Oct 2018",
+    "credential_id": null,
+    "skills": ["Databases"],
+    "credential_url": "http://university.mongodb.com/course_completion/89985073-f8f1-4558-9715-39252fc6"
     },
     {
-      "title": "AWS Certified Solution Architect Associate",
-      "issuer": "Amazon Web Services (AWS)",
-      "issue_date": "Aug 2018",
-      "credential_id": "VF10EL3KK2EE1BKE",
-      "skills": ["Cloud"],
-      "credential_url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    "title": "AWS Certified Solution Architect Associate",
+    "issuer": "Amazon Web Services (AWS)",
+    "issue_date": "Aug 2018",
+    "credential_id": "VF10EL3KK2EE1BKE",
+    "skills": ["Cloud"],
+    "credential_url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
     },
     {
-      "title": "Financial Markets",
-      "issuer": "Coursera Course Certificates",
-      "issue_date": "Aug 2016",
-      "credential_id": "VA3UTG6FG6GY",
-      "skills": ["FinTech"],
-      "credential_url": "https://www.coursera.org/account/accomplishments/verify/VA3UTG6FG6GY"
+    "title": "Financial Markets",
+    "issuer": "Coursera Course Certificates",
+    "issue_date": "Aug 2016",
+    "credential_id": "VA3UTG6FG6GY",
+    "skills": ["FinTech"],
+    "credential_url": "https://www.coursera.org/account/accomplishments/verify/VA3UTG6FG6GY"
     },
     {
-      "title": "IBM certified SOA Associate",
-      "issuer": "IBM",
-      "issue_date": "Jun 2010",
-      "credential_id": null,
-      "skills": ["Business Process Management","SOA"],
-      "credential_url": null
-    }
-  ]
+    "title": "IBM certified SOA Associate",
+    "issuer": "IBM",
+    "issue_date": "Jun 2010",
+    "credential_id": null,
+    "skills": ["Business Process Management", "SOA"],
+    "credential_url": null
+    },
+    {
+    "title": "NCFM - Derivatives",
+    "issuer": "NSE India",
+    "issue_date": "Mar 2010",
+    "credential_id": null,
+    "skills": ["FinTech"],
+    "credential_url": null
+    },
+    {
+    "title": "NCFM - Financial Markets",
+    "issuer": "National Stock Exchange India",
+    "issue_date": "Jan 2009",
+    "credential_id": null,
+    "skills": ["FinTech"],
+    "credential_url": null
+    },
+    {
+    "title": "Sun Certified Web Component Developer",
+    "issuer": "Sun Microsystems",
+    "issue_date": "Oct 2007",
+    "credential_id": null,
+    "skills": [],
+    "credential_url": null
+    },
+    {
+    "title": "Sun Certified Java Programmer",
+    "issuer": "Sun Microsystems",
+    "issue_date": "Jul 2007",
+    "credential_id": null,
+    "skills": ["Object-Oriented Programming (OOP)"],
+    "credential_url": null
+    },
+    {
+    "title": "IBM certified AIX specialist",
+    "issuer": "IBM",
+    "issue_date": "Apr 2007",
+    "credential_id": null,
+    "skills": [],
+    "credential_url": null
+    },
+    {
+    "title": "Getting Started With CockroachDB",
+    "issuer": "Cockroach Labs",
+    "issue_date": "Oct 2020",
+    "credential_id": "6c5a6bc6-1e41-30e9-8d8f-8fa4b9206084",
+    "skills": ["Databases"],
+    "credential_url": "https://university.cockroachlabs.com/award/certification/6c5a6bc6-1e41-30e9-8d8f-8fa4b9206084/view-ext"
+    },
+    {
+    "title": "Oracle Autonomous Database Cloud 2019 Certified Specialist",
+    "issuer": "Oracle",
+    "issue_date": "May 2020",
+    "credential_id": null,
+    "skills": ["Databases"],
+    "credential_url": "https://www.youracclaim.com/badges/7728b446-5e73-4852-bfb1-bc9ee3cf9cac/public_credential_url"
+    },
+    {
+    "title": "Oracle Cloud Infrastructure Foundations 2020 Certified Associate",
+    "issuer": "Oracle",
+    "issue_date": "Apr 2020",
+    "credential_id": null,
+    "skills": ["Cloud"],
+    "credential_url": "https://www.youracclaim.com/badges/b1400f95-72de-4445-a58e-30ffbc76a6fc/linked_in_profile"
+    },
+    {
+    "title": "Introduction to Fintech",
+    "issuer": "upGrad",
+    "issue_date": "Mar 2022",
+    "credential_id": null,
+    "skills": ["FinTech"],
+    "credential_url": "https://www.credential.net/397b4c52-52b8-47dc-9ac0-f09d826450b9"
+    }]
   ,
 };
 

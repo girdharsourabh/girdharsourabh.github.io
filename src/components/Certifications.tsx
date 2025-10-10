@@ -9,6 +9,13 @@ import {
   TabsTrigger,
 } from "../components/ui/tabs";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
+import {
   Card,
   CardContent,
   CardDescription,
@@ -45,62 +52,77 @@ export default function CertificationsSection({
   );
 
   const renderCertificationGrid = (certs: Certification[]) => {
+    const columns: Certification[][] = [];
+    for (let i = 0; i < certs.length; i += 2) {
+      columns.push(certs.slice(i, i + 2));
+    }
+
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {certs.map((cert) => (
-          <Card
-            key={cert.id}
-            className="h-full hover:shadow-md transition-shadow"
-          >
-            <CardHeader className="space-y-1">
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-lg font-semibold">
-                  {cert.title}
-                </CardTitle>
-                <Award className="h-5 w-5 text-amber-500" />
+      <Carousel opts={{ align: "start" }}>
+        <CarouselContent>
+          {columns.map((pair, idx) => (
+            <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+              <div className="flex flex-col gap-6">
+                {pair.map((cert) => (
+                  <Card
+                    key={cert.id}
+                    className="h-full hover:shadow-md transition-shadow"
+                  >
+                    <CardHeader className="space-y-1">
+                      <div className="flex justify-between items-start">
+                        <CardTitle className="text-lg font-semibold">
+                          {cert.title}
+                        </CardTitle>
+                        <Award className="h-5 w-5 text-amber-500" />
+                      </div>
+                      <CardDescription className="font-medium text-primary">
+                        {cert.issuer}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="mt-1">
+                      <p className="text-sm text-gray-500 mb-3">
+                        Issued: {cert.issue_date}
+                      </p>
+                      {cert.credential_id && (
+                        <p className="text-sm text-gray-500 mb-3">
+                          Credential ID: {cert.credential_id}
+                        </p>
+                      )}
+                      <div className="flex flex-wrap gap-1.5 mt-3">
+                        {cert.skills &&
+                          cert.skills.length > 0 &&
+                          cert.skills.map((skill, index) => (
+                            <Badge
+                              key={index}
+                              variant="outline"
+                              className="bg-gray-50 text-gray-700"
+                            >
+                              {skill}
+                            </Badge>
+                          ))}
+                      </div>
+                    </CardContent>
+                    {cert.credential_url && (
+                      <CardFooter>
+                        <a
+                          href={cert.credential_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" /> Verify credential
+                        </a>
+                      </CardFooter>
+                    )}
+                  </Card>
+                ))}
               </div>
-              <CardDescription className="font-medium text-primary">
-                {cert.issuer}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="mt-1">
-              <p className="text-sm text-gray-500 mb-3">
-                Issued: {cert.issue_date}
-              </p>
-              {cert.credential_id && (
-                <p className="text-sm text-gray-500 mb-3">
-                  Credential ID: {cert.credential_id}
-                </p>
-              )}
-              <div className="flex flex-wrap gap-1.5 mt-3">
-                {cert.skills &&
-                  cert.skills.length > 0 &&
-                  cert.skills.map((skill, index) => (
-                    <Badge
-                      key={index}
-                      variant="outline"
-                      className="bg-gray-50 text-gray-700"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-              </div>
-            </CardContent>
-            {cert.credential_url && (
-              <CardFooter>
-                <a
-                  href={cert.credential_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" /> Verify credential
-                </a>
-              </CardFooter>
-            )}
-          </Card>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     );
   };
 
@@ -122,7 +144,7 @@ export default function CertificationsSection({
   };
 
   return (
-    <section id="certifications" className="py-16 md:py-24 bg-gray-50 px-4">
+    <section id="certifications" className="py-8 md:py-12 bg-gray-50 px-4">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Certifications</h2>
 
@@ -136,84 +158,102 @@ export default function CertificationsSection({
           </div>
         ) : (
           <Tabs defaultValue="grid" className="w-full">
-            <div className="flex justify-center mb-8">
+            {/* <div className="flex justify-center mb-8">
               <TabsList>
                 <TabsTrigger value="grid">Grid View</TabsTrigger>
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>
               </TabsList>
-            </div>
+            </div> */}
 
             <TabsContent value="grid">
               {renderCertificationGrid(certifications)}
             </TabsContent>
 
             <TabsContent value="timeline">
-              <div className="max-w-3xl mx-auto">
-                {groupByYear(certifications).map(({ year, certs }) => (
-                  <div key={year} className="mb-10">
-                    <h3 className="text-xl font-semibold mb-4 text-primary">
-                      {year}
-                    </h3>
-                    <div className="space-y-4">
-                      {certs.map((cert) => (
-                        <Card
-                          key={cert.id}
-                          className="hover:shadow-md transition-shadow"
-                        >
-                          <CardHeader className="flex flex-row items-start justify-between pb-2">
-                            <div>
-                              <CardTitle className="text-lg">
-                                {cert.title}
-                              </CardTitle>
-                              <CardDescription className="mt-1">
-                                {cert.issuer}
-                              </CardDescription>
+              <div className="max-w-5xl mx-auto">
+                {(() => {
+                  const flat = [...certifications];
+                  // Optional: sort by year desc using the last token in issue_date
+                  flat.sort((a, b) => {
+                    const ya = Number((a.issue_date || "").split(" ").pop()) || 0;
+                    const yb = Number((b.issue_date || "").split(" ").pop()) || 0;
+                    return yb - ya;
+                  });
+                  const pairs: Certification[][] = [];
+                  for (let i = 0; i < flat.length; i += 2) {
+                    pairs.push(flat.slice(i, i + 2));
+                  }
+                  return (
+                    <Carousel opts={{ align: "start" }}>
+                      <CarouselContent>
+                        {pairs.map((pair, idx) => (
+                          <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+                            <div className="flex flex-col gap-4">
+                              {pair.map((cert) => (
+                                <Card
+                                  key={cert.id}
+                                  className="hover:shadow-md transition-shadow"
+                                >
+                                  <CardHeader className="flex flex-row items-start justify-between pb-2">
+                                    <div>
+                                      <CardTitle className="text-lg">
+                                        {cert.title}
+                                      </CardTitle>
+                                      <CardDescription className="mt-1">
+                                        {cert.issuer}
+                                      </CardDescription>
+                                    </div>
+                                    <Badge
+                                      variant="outline"
+                                      className="bg-gray-50 text-gray-700"
+                                    >
+                                      {cert.issue_date}
+                                    </Badge>
+                                  </CardHeader>
+                                  <CardContent>
+                                    {cert.credential_id && (
+                                      <p className="text-sm text-gray-500 mb-2">
+                                        Credential ID: {cert.credential_id}
+                                      </p>
+                                    )}
+                                    <div className="flex flex-wrap gap-1.5 mt-3">
+                                      {cert.skills &&
+                                        cert.skills.length > 0 &&
+                                        cert.skills.map((skill, index) => (
+                                          <Badge
+                                            key={index}
+                                            variant="outline"
+                                            className="bg-blue-50 text-blue-700 border-blue-200"
+                                          >
+                                            {skill}
+                                          </Badge>
+                                        ))}
+                                    </div>
+                                  </CardContent>
+                                  {cert.credential_url && (
+                                    <CardFooter>
+                                      <a
+                                        href={cert.credential_url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                                      >
+                                        <ExternalLink className="h-3.5 w-3.5" /> Verify
+                                        credential
+                                      </a>
+                                    </CardFooter>
+                                  )}
+                                </Card>
+                              ))}
                             </div>
-                            <Badge
-                              variant="outline"
-                              className="bg-gray-50 text-gray-700"
-                            >
-                              {cert.issue_date}
-                            </Badge>
-                          </CardHeader>
-                          <CardContent>
-                            {cert.credential_id && (
-                              <p className="text-sm text-gray-500 mb-2">
-                                Credential ID: {cert.credential_id}
-                              </p>
-                            )}
-                            <div className="flex flex-wrap gap-1.5 mt-3">
-                              {cert.skills &&
-                                cert.skills.length > 0 &&
-                                cert.skills.map((skill, index) => (
-                                  <Badge
-                                    key={index}
-                                    variant="outline"
-                                    className="bg-blue-50 text-blue-700 border-blue-200"
-                                  >
-                                    {skill}
-                                  </Badge>
-                                ))}
-                            </div>
-                          </CardContent>
-                          {cert.credential_url && (
-                            <CardFooter>
-                              <a
-                                href={cert.credential_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
-                              >
-                                <ExternalLink className="h-3.5 w-3.5" /> Verify
-                                credential
-                              </a>
-                            </CardFooter>
-                          )}
-                        </Card>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  );
+                })()}
               </div>
             </TabsContent>
           </Tabs>

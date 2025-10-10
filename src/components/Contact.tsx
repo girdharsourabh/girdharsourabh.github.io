@@ -101,11 +101,11 @@ export default function ContactSection({ profile, isLoading }: ContactProps) {
     return (
       <Card className="bg-white shadow-sm h-full">
         <CardContent className="p-6">
-          <h3 className="text-xl font-semibold mb-6 text-primary">
+          <h3 className="text-xl font-semibold mb-4 text-primary">
             Contact Information
           </h3>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {profile.email && (
               <div className="flex items-start">
                 <div className="text-primary text-xl mr-4">
@@ -283,20 +283,20 @@ export default function ContactSection({ profile, isLoading }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50 px-4">
+    <section id="contact" className="py-12 md:py-16 bg-gray-50 px-4">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center">Get In Touch</h2>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Feel free to reach out if you're looking for a developer, have
+        <h2 className="text-3xl font-bold mb-4 text-center">Get In Touch</h2>
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-6">
+          Feel free to reach out if you're looking for consultancy, have
           questions, or just want to connect.
         </p>
 
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-6">
           {/* Contact Information */}
-          <div className="md:w-2/5">{renderContactInfo()}</div>
+          <div className="w-full">{renderContactInfo()}</div>
 
           {/* Contact Form */}
-          <div className="md:w-3/5">{renderContactForm()}</div>
+          {/* <div className="md:w-3/5">{renderContactForm()}</div> */}
         </div>
       </div>
     </section>
