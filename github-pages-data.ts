@@ -415,21 +415,30 @@ export const profileData = {
   articles: [
     {
       id: 1,
-      title: "Cloud Native Observability: Practical Guide",
-      source: "Medium",
+      title: "From Building Platforms to Building People",
+      source: "LinkedIn",
       description:
-        "A practitioner’s guide to building cost-aware, actionable observability for modern microservices.",
-      date: "Aug 2024",
-      link: "https://medium.com/@girdharsourabh/cloud-native-observability-practical-guide",
+        "Leadership Lessons",
+      date: "Sep 2025",
+      link: "https://www.linkedin.com/pulse/from-building-platforms-people-leadership-5ndpc/",
     },
     {
       id: 2,
-      title: "Shift-Left Security in Fintech",
-      source: "LinkedIn",
+      title: "Transformative Journey",
+      source: "CXO Words",
       description:
-        "Key patterns to embed security in CI/CD and platform engineering for regulated environments.",
+        "Personal journey",
+      date: "Aug 2025",
+      link: "https://www.cxowords.com/india-south-asia/sourabh-girdhar",
+    },
+    {
+      id: 3,
+      title: "Nurturing Devops Excellence",
+      source: "CXO Words",
+      description:
+        "Devops and solutions",
       date: "May 2024",
-      link: "https://www.linkedin.com/pulse/shift-left-security-fintech-sourabh-girdhar/",
+      link: "https://heyzine.com/flip-book/2c4079a154.html#page/10",
     },
   ],
   certifications: [{
