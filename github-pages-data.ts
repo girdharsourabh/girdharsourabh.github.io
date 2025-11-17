@@ -5,10 +5,10 @@ export const profileData = {
   profile: {
     id: 1,
     name: "Sourabh Girdhar",
-    title: "Chief Technology Officer at Care.fi",
+    title: "Chief Technology Officer at Care.fi | Tech Business Consultant",
     email: "girdharsourabh@gmail.com",
     location: "Gurugram, India",
-    summary: "Engineering leader with 19+ years of experience in financial technology, specializing in building scalable, high-performance systems. Proven track record of leading teams to deliver innovative solutions that drive business value. Expert in distributed systems, cloud architecture, and modern engineering practices.",
+    summary: "Engineering leader and tech business consultant with 19+ years of experience in financial technology, specializing in building scalable, high-performance systems. I help organizations transform their technology strategy, optimize engineering processes, and build high-performing teams. Proven track record of leading teams to deliver innovative solutions that drive business value. Expert in distributed systems, cloud architecture, and modern engineering practices.",
     profile_image: "/images/Cropped.jpg",
     github: "https://github.com/girdharsourabh",
     linkedin: "https://www.linkedin.com/in/girdharsourabh/",
@@ -441,6 +441,44 @@ export const profileData = {
       link: "https://heyzine.com/flip-book/2c4079a154.html#page/10",
     },
   ],
+  consultingServices: [
+    {
+      id: 1,
+      title: "Technology Strategy & Roadmap",
+      description: "Help organizations define their technology vision, create actionable roadmaps, and align technology initiatives with business objectives. From digital transformation to cloud migration strategies.",
+      icon: "Compass"
+    },
+    {
+      id: 2,
+      title: "Engineering Excellence & Team Building",
+      description: "Build high-performing engineering teams, establish best practices, improve developer experience, and implement effective processes that drive productivity and innovation.",
+      icon: "Users"
+    },
+    {
+      id: 3,
+      title: "Fintech & Healthcare Tech Solutions",
+      description: "Leverage deep domain expertise in financial technology and healthcare to design and deliver scalable, compliant, and innovative solutions for complex business challenges.",
+      icon: "Building"
+    },
+    {
+      id: 4,
+      title: "Cloud Architecture & DevSecOps",
+      description: "Design cloud-native architectures, implement DevSecOps practices, optimize infrastructure costs, and ensure security and compliance across your technology stack.",
+      icon: "Cloud"
+    },
+    {
+      id: 5,
+      title: "AI & Innovation Consulting",
+      description: "Guide AI implementation strategies, identify automation opportunities, and help organizations leverage emerging technologies to gain competitive advantage.",
+      icon: "Sparkles"
+    },
+    {
+      id: 6,
+      title: "Technical Due Diligence & Advisory",
+      description: "Provide expert technical assessment for M&A activities, investor due diligence, and strategic technology decisions to de-risk investments and maximize value.",
+      icon: "FileSearch"
+    }
+  ],
   certifications: [{
     "title": "AI in Cybersecurity Training By CyberFrat Certificate",
     "issuer": "CyberFrat",
@@ -703,4 +741,8 @@ export function getTalksData() {
 
 export function getArticlesData() {
   return profileData.articles;
+}
+
+export function getConsultingServicesData() {
+  return profileData.consultingServices;
 }

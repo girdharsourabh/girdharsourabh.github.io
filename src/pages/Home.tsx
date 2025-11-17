@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import ConsultingServices from "../components/ConsultingServices";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Education from "../components/Education";
@@ -15,7 +16,7 @@ import { profileData } from "../../github-pages-data";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
-const { profile, experiences, skills, education, certifications, projects, talks, articles} = profileData;
+const { profile, experiences, skills, education, certifications, projects, talks, articles, consultingServices} = profileData;
   
 
   useEffect(() => {
@@ -52,6 +53,10 @@ const { profile, experiences, skills, education, certifications, projects, talks
 
       <main>
         <Hero profile={profile as any} isLoading={false} />
+        <ConsultingServices
+          services={consultingServices}
+          isLoading={false}
+        />
         <Experience
           experiences={experiences}
           isLoading={false}

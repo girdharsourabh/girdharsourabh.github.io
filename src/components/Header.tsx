@@ -35,6 +35,7 @@ export default function Header({ activeSection }: HeaderProps) {
 
   const navItems = [
     { id: "about", label: "About" },
+    { id: "consulting", label: "Consulting" },
     { id: "experience", label: "Experience" },
     { id: "skills", label: "Skills" },
     { id: "education", label: "Education" },
