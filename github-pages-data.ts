@@ -1,6 +1,8 @@
 // This data file is optimized for GitHub Pages static hosting
 // It contains all the data needed for the portfolio website
 
+import { title } from "process";
+
 export const profileData = {
   profile: {
     id: 1,
@@ -479,7 +481,24 @@ export const profileData = {
       icon: "FileSearch"
     }
   ],
-  certifications: [{
+  certifications: [
+    {
+      "title": "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      "issuer": "Oracle",
+      "issue_date": "Oct 2025",
+      "credential_id": "#",
+      skills: ["Cloud", "Generative AI"],
+      credential_url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=82B850B34D57B23828A956EBB0675CB9661EABD1BBA946AB5EE5B314EB948DCF"
+    },
+    {
+      "title": "Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional",
+      "issuer": "Oracle",
+      "issue_date": "Oct 2025",
+      "credential_id": "274311202OCI2025MCAOCP",
+      skills: ["Cloud"],
+      credential_url: "https://brm-certview.oracle.com/ords/certview/ecertificate?ssn=SR2618456&trackId=OCI2025MCAOCP&key=7126814e81a083b1e956b020280f8d7e7f49c74b"
+    },
+    {
     "title": "AI in Cybersecurity Training By CyberFrat Certificate",
     "issuer": "CyberFrat",
     "issue_date": "Mar 2025",

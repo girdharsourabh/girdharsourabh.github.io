@@ -33,15 +33,15 @@ export default function Hero({ profile, isLoading }: HeroProps) {
   return (
     <section id="about" className="pt-32 md:pt-40 pb-20 md:pb-32 px-4 relative overflow-hidden">
       {/* Decorative gradient elements */}
-      <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-40 -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100 to-transparent rounded-full blur-3xl opacity-30 -z-10" />
+      <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-br from-cyan-100 to-transparent rounded-full blur-3xl opacity-40 -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-teal-100 to-transparent rounded-full blur-3xl opacity-30 -z-10" />
 
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
           {/* Profile Image */}
           <div className="animate-fade-in-up flex-shrink-0">
             <div className="relative w-56 h-56 md:w-72 md:h-72 group">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-elegant border border-white/20">
                 <img
                   src={
@@ -60,7 +60,7 @@ export default function Hero({ profile, isLoading }: HeroProps) {
             <h1 className="animate-fade-in-up text-5xl md:text-6xl font-playfair font-bold mb-6 leading-tight text-slate-900">
               {profile.name}
             </h1>
-            <p className="animate-fade-in-up animation-delay-100 text-2xl md:text-3xl font-sora font-500 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
+            <p className="animate-fade-in-up animation-delay-100 text-2xl md:text-3xl font-sora font-500 bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-8">
               {profile.title}
             </p>
             <div className="max-w-3xl mb-10">
@@ -81,7 +81,7 @@ export default function Hero({ profile, isLoading }: HeroProps) {
                     });
                   }
                 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-600 rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-600 rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300 transform hover:scale-105"
               >
                 Get in Touch
               </Button>
