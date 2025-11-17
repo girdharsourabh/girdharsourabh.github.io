@@ -56,7 +56,7 @@ export default function Header({ activeSection }: HeaderProps) {
       <div className="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
         <a
           href="#about"
-          className="font-playfair font-bold text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          className="font-playfair font-bold text-2xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("about");
@@ -74,7 +74,7 @@ export default function Header({ activeSection }: HeaderProps) {
                   href={`#${item.id}`}
                   className={`px-4 py-2 rounded-lg font-sora font-500 transition-all duration-300 ${
                     activeSection === item.id
-                      ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+                      ? "text-white bg-gradient-to-r from-cyan-600 to-teal-600"
                       : "text-slate-700 hover:bg-slate-100"
                   }`}
                   onClick={(e) => {
@@ -114,7 +114,7 @@ export default function Header({ activeSection }: HeaderProps) {
                 href={`#${item.id}`}
                 className={`block px-4 py-3 rounded-lg font-sora font-500 transition-all duration-300 ${
                   activeSection === item.id
-                    ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+                    ? "text-white bg-gradient-to-r from-cyan-600 to-teal-600"
                     : "text-slate-700 hover:bg-slate-100"
                 }`}
                 onClick={(e) => {
