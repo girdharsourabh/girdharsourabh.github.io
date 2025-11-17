@@ -31,30 +31,46 @@ export default function Hero({ profile, isLoading }: HeroProps) {
   }
 
   return (
-    <section id="about" className="pt-24 md:pt-32 pb-16 md:pb-24 px-4">
+    <section id="about" className="pt-32 md:pt-40 pb-20 md:pb-32 px-4 relative overflow-hidden">
+      {/* Decorative gradient elements */}
+      <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-40 -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100 to-transparent rounded-full blur-3xl opacity-30 -z-10" />
+
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg flex-shrink-0">
-            <img
-              src={
-                profile.profile_image ||
-                "https://media.licdn.com/dms/image/v2/D5603AQFok_9PS1AksQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729579402456?e=1751500800&v=beta&t=h2W6q9S-hEV1cBzbLCh5oPd2BmnxhDPVNf6TKOheVaE"
-              }
-              alt={`${profile.name} Profile Picture`}
-              className="w-full h-full object-cover"
-            />
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
+          {/* Profile Image */}
+          <div className="animate-fade-in-up flex-shrink-0">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 group">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-elegant border border-white/20">
+                <img
+                  src={
+                    profile.profile_image ||
+                    "https://media.licdn.com/dms/image/v2/D5603AQFok_9PS1AksQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729579402456?e=1751500800&v=beta&t=h2W6q9S-hEV1cBzbLCh5oPd2BmnxhDPVNf6TKOheVaE"
+                  }
+                  alt={`${profile.name} Profile Picture`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+
+          {/* Content */}
+          <div className="text-center md:text-left flex-1">
+            <h1 className="animate-fade-in-up text-5xl md:text-6xl font-playfair font-bold mb-6 leading-tight text-slate-900">
               {profile.name}
             </h1>
-            <h2 className="text-xl md:text-2xl text-gray-600 mb-6">
+            <p className="animate-fade-in-up animation-delay-100 text-2xl md:text-3xl font-sora font-500 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
               {profile.title}
-            </h2>
-            <div className="max-w-2xl mb-8">
-              <p className="text-gray-700 leading-relaxed">{profile.summary}</p>
+            </p>
+            <div className="max-w-3xl mb-10">
+              <p className="animate-fade-in-up animation-delay-200 text-lg text-slate-700 leading-relaxed font-sora">
+                {profile.summary}
+              </p>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+
+            {/* CTA Buttons */}
+            <div className="animate-fade-in-up animation-delay-300 flex flex-wrap gap-4 justify-center md:justify-start mb-10">
               <Button
                 onClick={() => {
                   const element = document.getElementById("contact");
@@ -65,7 +81,7 @@ export default function Hero({ profile, isLoading }: HeroProps) {
                     });
                   }
                 }}
-                className="bg-primary hover:bg-primary/90 text-white"
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-600 rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300 transform hover:scale-105"
               >
                 Get in Touch
               </Button>
@@ -73,7 +89,7 @@ export default function Hero({ profile, isLoading }: HeroProps) {
               {profile.resume_url && (
                 <Button
                   variant="outline"
-                  className="bg-white border border-gray-300 hover:bg-gray-50 flex items-center gap-2"
+                  className="px-8 py-3 bg-white/50 backdrop-blur-sm border border-slate-200 hover:bg-white/80 text-slate-900 font-600 rounded-lg transition-all duration-300 flex items-center gap-2 hover-lift"
                   asChild
                 >
                   <a
@@ -81,21 +97,23 @@ export default function Hero({ profile, isLoading }: HeroProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FileText className="h-4 w-4" /> Download Resume
+                    <FileText className="h-5 w-5" /> Download Resume
                   </a>
                 </Button>
               )}
             </div>
-            <div className="flex mt-8 gap-6 justify-center md:justify-start">
+
+            {/* Social Links */}
+            <div className="animate-fade-in-up animation-delay-400 flex gap-8 justify-center md:justify-start">
               {profile.linkedin && (
                 <a
                   href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="group relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/50 backdrop-blur-sm border border-slate-200 text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-6 w-6" />
+                  <Linkedin className="h-6 w-6 transition-transform group-hover:scale-110" />
                 </a>
               )}
 
@@ -104,10 +122,10 @@ export default function Hero({ profile, isLoading }: HeroProps) {
                   href={profile.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="group relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/50 backdrop-filter blur-sm border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-300"
                   aria-label="GitHub"
                 >
-                  <Github className="h-6 w-6" />
+                  <Github className="h-6 w-6 transition-transform group-hover:scale-110" />
                 </a>
               )}
 
@@ -116,20 +134,20 @@ export default function Hero({ profile, isLoading }: HeroProps) {
                   href={profile.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="group relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/50 backdrop-blur-sm border border-slate-200 text-slate-700 hover:text-blue-400 hover:bg-sky-50 transition-all duration-300"
                   aria-label="Twitter"
                 >
-                  <Twitter className="h-6 w-6" />
+                  <Twitter className="h-6 w-6 transition-transform group-hover:scale-110" />
                 </a>
               )}
 
               {profile.email && (
                 <a
                   href={`mailto:${profile.email}`}
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="group relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/50 backdrop-blur-sm border border-slate-200 text-slate-700 hover:text-red-600 hover:bg-red-50 transition-all duration-300"
                   aria-label="Email"
                 >
-                  <Mail className="h-6 w-6" />
+                  <Mail className="h-6 w-6 transition-transform group-hover:scale-110" />
                 </a>
               )}
             </div>
