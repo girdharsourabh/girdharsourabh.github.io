@@ -48,7 +48,7 @@ const { profile, experiences, skills, education, certifications, projects, talks
   }, []);
 
   return (
-    <div className="bg-gray-50 font-sans text-gray-800">
+    <div className="bg-gradient-to-b from-white via-slate-50 to-slate-100 min-h-screen">
       <Header activeSection={activeSection} />
 
       <main>
