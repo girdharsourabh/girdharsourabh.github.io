@@ -443,6 +443,26 @@ export const profileData = {
       link: "https://heyzine.com/flip-book/2c4079a154.html#page/10",
     },
   ],
+  podcasts: [
+    {
+      id: 1,
+      title: "The Speed Code: How Fintech Turned Days into Minutes",
+      show: "Fintech CTO Talks",
+      description:
+        "The Speed Code: How Fintech Turned Days into Minutes",
+      date: "Nov 2025",
+      video_link: "https://www.youtube.com/watch?v=gqcgsPiqLFM",
+    },
+    {
+      id: 2,
+      title: "How To Start Investing In 2023?",
+      show: "The Inquisitive Investor | Grip Invest",
+      description:
+        "How To Start Investing In 2023?",
+      date: "Aug 2023",
+      video_link: "https://www.youtube.com/watch?v=-NBctksx6wA",
+    }
+  ],
   consultingServices: [
     {
       id: 1,
@@ -760,6 +780,10 @@ export function getTalksData() {
 
 export function getArticlesData() {
   return profileData.articles;
+}
+
+export function getPodcastsData() {
+  return profileData.podcasts;
 }
 
 export function getConsultingServicesData() {
