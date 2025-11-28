@@ -101,6 +101,18 @@ export const articles = pgTable("articles", {
 });
 
 export const insertArticleSchema = createInsertSchema(articles).omit({ id: true });
+ 
+// Podcasts schema
+export const podcasts = pgTable("podcasts", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  show: text("show").notNull(),
+  description: text("description").notNull(),
+  date: text("date").notNull(),
+  video_link: text("video_link").notNull(),
+});
+
+export const insertPodcastSchema = createInsertSchema(podcasts).omit({ id: true });
 
 // Type definitions
 export type InsertUser = z.infer<typeof insertUserSchema>;
@@ -126,6 +138,9 @@ export type Talk = typeof talks.$inferSelect;
 
 export type InsertArticle = z.infer<typeof insertArticleSchema>;
 export type Article = typeof articles.$inferSelect;
+
+export type InsertPodcast = z.infer<typeof insertPodcastSchema>;
+export type Podcast = typeof podcasts.$inferSelect;
 
 // Certification table
 export const certifications = pgTable("certifications", {

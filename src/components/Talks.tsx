@@ -1,5 +1,5 @@
-import { Award, FileText, Link, Video } from "lucide-react";
-import { Talk, Article } from "../shared/schema.ts";
+import { Award, FileText, Link, Mic, Video } from "lucide-react";
+import { Talk, Article, Podcast } from "../shared/schema.ts";
 import { Skeleton } from "./ui/skeleton.tsx";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Badge } from "./ui/badge";
@@ -14,10 +14,16 @@ import {
 interface TalksProps {
   talks: Talk[] | undefined;
   articles?: Article[] | undefined;
+  podcasts?: Podcast[] | undefined;
   isLoading: boolean;
 }
 
-export default function TalksSection({ talks, articles = [], isLoading }: TalksProps) {
+export default function TalksSection({
+  talks,
+  articles = [],
+  podcasts = [],
+  isLoading,
+}: TalksProps) {
   const renderSkeletonTalk = () => (
     <div className="mb-10 last:mb-0">
       <div className="flex flex-col md:flex-row gap-6">
@@ -65,6 +71,7 @@ export default function TalksSection({ talks, articles = [], isLoading }: TalksP
                   <TabsTrigger value="talks">Talks</TabsTrigger>
                   <TabsTrigger value="awards">Awards</TabsTrigger>
                   <TabsTrigger value="articles">Articles</TabsTrigger>
+                  <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
                 </TabsList>
               </div>
 
@@ -319,6 +326,68 @@ export default function TalksSection({ talks, articles = [], isLoading }: TalksP
                                       className="text-primary hover:text-primary/80 font-medium flex items-center gap-1"
                                     >
                                       <Link className="h-4 w-4" /> Read
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </TabsContent>
+
+              <TabsContent value="podcasts" className="space-y-8">
+                <Carousel opts={{ align: "start" }}>
+                  <CarouselContent>
+                    {(podcasts || [])
+                      .sort((a, b) => {
+                        const dateA = new Date(a.date);
+                        const dateB = new Date(b.date);
+                        return dateB.getTime() - dateA.getTime();
+                      })
+                      .map((podcast) => (
+                        <CarouselItem
+                          key={podcast.id}
+                          className="md:basis-1/2 lg:basis-1/3 h-full"
+                        >
+                          <div className="h-full flex flex-col min-h-[20rem] md:min-h-[22rem] mb-10 last:mb-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div className="flex flex-col md:flex-row gap-6">
+                              <div className="md:w-1/4">
+                                <span className="text-gray-500 font-medium">
+                                  {podcast.date}
+                                </span>
+                                <div className="mt-2">
+                                  <Badge
+                                    variant="outline"
+                                    className="bg-purple-50 text-purple-700 border-purple-200"
+                                  >
+                                    <Mic className="h-3 w-3 mr-1" /> Podcast
+                                  </Badge>
+                                </div>
+                              </div>
+                              <div className="md:w-3/4">
+                                <h3 className="text-xl font-semibold mb-2">
+                                  {podcast.title}
+                                </h3>
+                                <h4 className="text-gray-700 font-medium mb-3">
+                                  {podcast.show}
+                                </h4>
+                                <p className="text-gray-600 mb-3 line-clamp-3">
+                                  {podcast.description}
+                                </p>
+                                <div className="flex gap-3">
+                                  {podcast.video_link && (
+                                    <a
+                                      href={podcast.video_link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-primary hover:text-primary/80 font-medium flex items-center gap-1"
+                                    >
+                                      <Video className="h-4 w-4" /> Watch
                                     </a>
                                   )}
                                 </div>

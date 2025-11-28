@@ -16,7 +16,7 @@ import { profileData } from "../../github-pages-data";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
-const { profile, experiences, skills, education, certifications, projects, talks, articles, consultingServices} = profileData;
+const { profile, experiences, skills, education, certifications, projects, talks, articles, podcasts, consultingServices} = profileData;
   
 
   useEffect(() => {
@@ -64,7 +64,12 @@ const { profile, experiences, skills, education, certifications, projects, talks
         <Skills skills={skills} isLoading={false} />
         <Education education={education} isLoading={false} />
         {/** <Projects projects={projects} isLoading={false} /> **/}
-        <Talks talks={talks} articles={articles} isLoading={false} />
+        <Talks
+          talks={talks}
+          articles={articles}
+          podcasts={podcasts}
+          isLoading={false}
+        />
         <Certifications
           certifications={certifications}
           isLoading={false}
