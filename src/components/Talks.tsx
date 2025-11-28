@@ -24,6 +24,20 @@ export default function TalksSection({
   podcasts = [],
   isLoading,
 }: TalksProps) {
+  const getYoutubeThumbnail = (videoUrl?: string | null) => {
+    if (!videoUrl) return null;
+    try {
+      const parsedUrl = new URL(videoUrl);
+      const idFromQuery = parsedUrl.searchParams.get("v");
+      const idFromPath = parsedUrl.pathname.split("/").filter(Boolean).pop();
+      const videoId = idFromQuery || idFromPath;
+      if (!videoId) return null;
+      return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    } catch (error) {
+      return null;
+    }
+  };
+
   const renderSkeletonTalk = () => (
     <div className="mb-10 last:mb-0">
       <div className="flex flex-col md:flex-row gap-6">
@@ -355,6 +369,16 @@ export default function TalksSection({
                           className="md:basis-1/2 lg:basis-1/3 h-full"
                         >
                           <div className="h-full flex flex-col min-h-[20rem] md:min-h-[22rem] mb-10 last:mb-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            {getYoutubeThumbnail(podcast.video_link) && (
+                              <div className="mb-4 overflow-hidden rounded-lg">
+                                <img
+                                  src={getYoutubeThumbnail(podcast.video_link) ?? ""}
+                                  alt={`${podcast.title} thumbnail`}
+                                  className="w-full h-40 object-cover transition-transform duration-200 hover:scale-105"
+                                  loading="lazy"
+                                />
+                              </div>
+                            )}
                             <div className="flex flex-col md:flex-row gap-6">
                               <div className="md:w-1/4">
                                 <span className="text-gray-500 font-medium">
