@@ -7,7 +7,7 @@ export const profileData = {
   profile: {
     id: 1,
     name: "Sourabh Girdhar",
-    title: "Chief Technology Officer at Care.fi | Tech Business Consultant",
+    title: "Technology Enthusiast",
     email: "girdharsourabh@gmail.com",
     location: "Gurugram, India",
     summary: "Engineering leader and tech business consultant with 19+ years of experience in financial technology, specializing in building scalable, high-performance systems. I help organizations transform their technology strategy, optimize engineering processes, and build high-performing teams. Proven track record of leading teams to deliver innovative solutions that drive business value. Expert in distributed systems, cloud architecture, and modern engineering practices.",
@@ -24,7 +24,7 @@ export const profileData = {
       company: "Care.fi",
       description:
         "<p><p>Overseeing multiple business lines with an ARR of USD 1M, driving innovation, scale, and governance across</p><p>healthcare fintech.</p><p>Innovation &amp; AI: Spearheaded a GenAI-powered quality check tool for health insurance claims; built a</p><p>full-stack credit-to-commerce platform tackling systemic healthcare challenges.</p><p>Scaling Operations: Expanded Instant Discharge (B2B2C) 7x to 7,000+ cases/month within a year;</p><p>launched a B2B pharmacy marketplace and a SaaS-based hospital revenue cycle management platform,</p><p>processing 500k+ claims in 6 months.</p><p>Fintech Growth: Led the digital credit line system for suppliers, hospitals, and pharmacies &mdash; disbursals</p><p>crossed <strong>₹</strong>1,000 Cr with ₹100 Cr AUM, achieving 400% growth in two years.</p><p>Governance &amp; Leadership: Directed infrastructure and cybersecurity; successfully delivered ISO &amp; SOC2</p><p>certifications. Actively involved in acquisitions, investor due diligence, and key management initiatives.</p></p>",
-      date_range: "Nov 2023 - Present",
+      date_range: "Nov 2023 - Nov 2025",
       technologies: [
         "Leadership",
         "Fintech",
