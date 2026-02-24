@@ -44,11 +44,11 @@ export const profileData = {
         "<p>Lead the the development of complex Loan Management System (LMS), Business Risk Engine from scratch.<br /><br />Built a roadmap with the Product team on multiple products like LMS, Risk Engine, Configuration Management, Dealer financing, Value Added Services (VAS), Collections and payments.<br /><br />With all these new finance stack, business gained - <br />100% increase in loan book to 220 MN USD.<br />Cost saving of 50K USD annually due to automations and vendor licenses.<br />Increase in online collection from 40% to 60% (200K per month).<br />Reduction in Manual reviews for approvals from 40% to under 10% (25K USD annual savings).<br />Reduction error loan in loan processing from 6% to 0.2%.<br />Reduction of DPD - 90 (delayed loans) from 5.6% to 4.1%.<br /><br />Collaborated with Product, Design, Analytics, Engineering, and other teams to align organisational goals with company&rsquo;s objectives.<br /><br />Lead a team of 35+, including 5 team leads leading teams of 6-9 each. Directly responsible for performance evaluation, career development, and growth of the team.<br /><br />Interviewed, hired, and on boarded 20 new engineers, with a retention rate of 95%. Part of campus and leadership hiring team.<br /><br />Worked on design of complete competency framework of technology for the whole OLX group.</p>",
       date_range: "Sep 2021 - nov 2023",
       technologies: [
-        "Go",
+        "Node",
         "React",
         "AWS",
         "Microservices",
-        "gRPC",
+        "Java/ Spring",
         "Cloud Architecture",
       ],
       order: 2,
@@ -66,8 +66,8 @@ export const profileData = {
         "<p>Developed multiple dashboards, automations, reports to help Business, product ops, support teams.</p>"+
         "<p>Developed C# windows services to load orders to trading system and run compliance.</p>"+
         "<p>Technologies worked on - Frontier reconciliation tool, Spring Batch, Ibatis, C#, Crystal reports, Velocity, J2EE, Spring Boot, Rest services, SQL Server, JQuery, WPF.</p>",
-      date_range: "Aug 2018 - Sep 2021",
-      technologies: ["Go", "C++", "JavaScript", "React", "Microservices"],
+      date_range: "Jun 2013 - Sep 2021",
+      technologies: ["Java", "SWIFT", "C#", "RPA", "Adobe Experience Manager"],
       order: 3,
     },
     {
